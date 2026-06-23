@@ -18,7 +18,7 @@ def main():
     # Jalankan FastAPI Web Server di port 8000
     # Host '0.0.0.0' agar bisa dihubungkan ke Cloudflare Tunnel
     print("[System] Menghidupkan Controller Dashboard pada port 8000...")
-    uvicorn.run("controller.app:app", host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run("controller.app:app", host="0.0.0.0", port=8000, reload=False, loop='asyncio')
 
 if __name__ == "__main__":
     main()
